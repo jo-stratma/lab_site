@@ -1,0 +1,49 @@
+{% include "header.html" %}
+
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/potato_plant1.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>SolEdits Lab</h1>
+          <span class="subheading">Keeping Track of Thing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<body>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Item</th>
+    <th>Order Date</th>
+    <th>Amount</th>
+    <th>Price per Item</th>
+    <th>Total costs in SEK</th>
+    <th>Supplier</th>
+    <th>Link to Product</th>
+    <th>Who Ordered</th>
+  </tr>
+
+  <tr>
+    <td>001</td>
+    <td>LB-Medium</td>
+    <td>{{date}}</td>
+    <td>5</td>
+    <td>100</td>
+    <td>500</td>
+    <td>ThermoFischer</td>
+    <td>www.thermofischer/lb-medium</td>
+    <td>JST</td>
+  </tr>
+
+</table>
+
+</body>
+

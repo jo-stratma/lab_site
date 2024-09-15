@@ -1,4 +1,4 @@
- {% include "header.html" %}
+{% include "header.html" %}
 
 <header
   class="masthead"
@@ -9,9 +9,9 @@
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-md-10 col-lg-8 col-xl-7">
         <div class="site-heading">
-          <h1>Overview Orders</h1>
+          <h1>Pending Orders</h1>
           <p></p>
-          <span class="subheading">Here is a list of all orders.</span>
+          <span class="subheading">Here are all pending Orders..</span>
         </div>
       </div>
     </div>
@@ -37,7 +37,11 @@
            Delivered on: {{post.delivery_date}}
             </p>
             </a>
+         <div class="d-flex justify-content-end mb-2">
+    <a href="{{url_for('edit_order', order_id = post.id)}}" class="btn btn-primary float-right"
+    >Edit Order</a>
       </div>
+
 
 
 

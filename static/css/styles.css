@@ -73,7 +73,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #212529;
+  --bs-link-color: #FDFAD9;
   --bs-link-hover-color: #0085A1;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
@@ -10768,7 +10768,7 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > a {
-  color: #212529;
+  color: #FDFAD9;   #### Change Johannes
 }
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;

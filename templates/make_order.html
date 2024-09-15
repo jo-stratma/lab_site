@@ -1,0 +1,51 @@
+{% from "bootstrap5/form.html" import render_form %} {% block content %} {%
+include "header.html" %}
+
+
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/potato_plant1.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>Orders</h1>
+          <span class="subheading">Here you can register or update orders.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+
+        <div class="d-flex justify-content-end mb-2 ">
+          <a
+            class="btn btn-secondary float-center"
+            href="{{url_for('pending_orders')}}"
+            > Pending Orders </a>
+           </div>
+
+          <div class="d-flex justify-content-end mb-4 ">
+          <a
+            class="btn btn-secondary float-center"
+            href="{{url_for('all_orders')}}"
+            >All Orders </a>
+           </div>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+ {% endblock %}
+
+

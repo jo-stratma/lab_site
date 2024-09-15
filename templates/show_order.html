@@ -1,0 +1,53 @@
+ {% include "header.html" %}
+
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/potato_plant2.jpg')"
+
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>Order Details</h1>
+          <p></p>
+          <span class="subheading">Detailed View of Order.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="subheading">
+          <h3>Product: {{order.product}}</h3>
+
+          <p></p>
+          <span class="subheading">
+            <p> Quantity: {{ order.amount }} </p>
+            <p> Supplier: {{ order.provider }} </p>
+            <p> Product Link: <a href="{{ order.product_url}}"> {{ order.product_url}}</a></p>
+
+
+            <p> Order Date: {{ order.date }} </p>
+            <p> Delivery date: {{ order.delivery_date }} </p>
+            <p> Ordered by: {{ order.user }} </p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="d-flex justify-content-end mb-2">
+    <a href="{{url_for('edit_order', order_id = order.id)}}" class="btn btn-primary float-right"
+    >Edit Order</a>
+  </div>
+
+
+
+
+

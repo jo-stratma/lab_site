@@ -1,0 +1,52 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/potato_plant1.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>All Ideas</h1>
+          <span class="subheading">List of all new Ideas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <!-- Post preview-->
+      {% for post in all_posts %}
+      <div class="post-preview">
+        <a href="{{url_for('get_all_ideas') }}"> </a>
+          <h3 class="post-title">{{post.title}}</h3>
+          <h4 class="post-subtitle">{{post.subtitle}}</h4>
+          <p>{{post.body|safe}}</p>
+
+        <div class="meta">
+          <li>
+            {{post.author}}, {{post.date}}
+          </li>
+
+        </div>
+
+
+
+
+          <!-- TODO: Only show delete button if user id is 1 (admin user) -->
+
+
+      </div>
+      <!-- Divider-->
+      <hr class="my-4" />
+      {% endfor %}
+
+
+    </div>
+  </div>
+</div>
